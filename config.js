@@ -11,14 +11,20 @@ var path = require('path'),
 // ------------------------------------------------------------------------
 // If the App Setting 'websiteUrl' is set, Ghost will use that URL as base.
 // If it isn't set, we'll go with the default sitename.
-if (!websiteUrl || websiteUrl === '' ||  websiteUrl.length === 0) {
+if (isUndefined(websiteUrl)) {
     websiteUrl = 'http://' + process.env.WEBSITE_HOSTNAME;
-    console.log(websiteUrl);
 }
 
-if (!websiteUrlSSL || websiteUrlSSL === '' ||  websiteUrlSSL.length === 0) {
-    websiteUrlSSL = 'https://' + process.env.WEBSITE_HOSTNAME;
-    console.log(websiteUrlSSL);
+if (isUndefined(websiteUrlSSL)) {
+    var pattern = new RegExp('^.+://(.+)$');
+    websiteUrlSSL = 'https://' + pattern.exec(websiteUrl)[1];
+}
+
+console.log('websiteUrl: ' + websiteUrl);
+console.log('websiteUrlSSL: ' + websiteUrlSSL);
+
+function isUndefined(variable) {
+    return !variable || variable === '' ||  variable.length === 0;
 }
 
 config = {

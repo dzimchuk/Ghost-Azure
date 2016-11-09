@@ -15,12 +15,13 @@ After deployment, Ghost will continue setup - resulting in your brand new websit
 ### Custom Domain
 Directly after installation, Ghost will assume that your blog runs at `http://sitename.azurewebsites.net`. Should you switch to a custom domain, please inform Ghost about that change - you can do by setting the App Setting `websiteUrl` and restarting your website.
 
-### SSL
+### HTTPS
 
-You have a couple of options here:
+You have a few options here:
 
-1. Going all HTTPS (both front end and admin). Just assign an https address to `websiteUrl` envrionment variable, e.g. `https://sitename.azurewebsites.net`
-2. HTTPS for admin area only. If you don't use a custom domain, no changes are required as the provided config.json already sets `forceAdminSSL` to `true`. If you use a custom domain, then add `websiteUrlSSL` environment variable and assign your https address to it.
+1. Going all HTTPS (both front end and admin). Just assign an https address to `websiteUrl` envrionment variable, e.g. `https://sitename.azurewebsites.net`. If you use a custom domain make sure to set it to `websiteUrl` envrionment variable, e.g. `https://mycustomdomain.com`. Do not set `websiteUrlSSL` envrionment variable.
+2. HTTPS for admin area only (no custom domain). Do **NOT** set `websiteUrl` and `websiteUrlSSL` envrionment variables. `forceAdminSSL` is already set to `true` in `production` configuration and Ghost will redirect to `https://sitename.azurewebsites.net` when you try to access the admin area.
+3. HTTPS for admin area only (custom domain). Assign your http address to `websiteUrl`. If you want the admin area to be served from a different domain, set it to `websiteUrlSSL` environment variable with the `https` scheme.
 
 ### Email
 
