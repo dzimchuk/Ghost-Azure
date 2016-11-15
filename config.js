@@ -61,6 +61,16 @@ config = {
             port: process.env.PORT
         },
         
+        storage: {
+            active: 'azure-blob-storage',
+            'azure-blob-storage': {
+                connectionString: 'your storage account connection string',
+                container: 'your container name', // lowercase, 3-63 characters, only letters, numbers or dashes (-), default is 'ghost'
+                cdn: 'your CDN endpoint', // optional
+                useHttps: false // use https CDN endpoint, optional, default is 'false'
+            }
+        }
+        
         forceAdminSSL: true
     },
 
