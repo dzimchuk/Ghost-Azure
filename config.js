@@ -69,7 +69,7 @@ config = {
                 cdn: 'your CDN endpoint', // optional
                 useHttps: false // use https CDN endpoint, optional, default is 'false'
             }
-        }
+        },
         
         forceAdminSSL: true
     },
