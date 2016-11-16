@@ -66,8 +66,7 @@ config = {
             'azure-blob-storage': {
                 connectionString: '',
                 container: '', // lowercase, 3-63 characters, only letters, numbers or dashes (-), default is 'ghost'
-                cdn: '', // optional
-                useHttps: false // use https CDN endpoint, optional, default is 'false'
+                cdnUrl: '', // optional, e.g. https://az******.vo.msecnd.net
             }
         },
         

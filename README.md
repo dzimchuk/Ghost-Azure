@@ -28,15 +28,21 @@ You have a few options here:
 You're going to need to add a few more environment variables as defined in config.json:
 
 - emailFromAddress
-- emailService
-- emailHost
-- emailPort
+- emailService (e.g. SendGrid)
+- emailHost (e.g. smtp.sendgrid.net)
+- emailPort (e.g. 587)
 - emailUsername
 - emailPassword
 
 ### Blog Storage
 
-If you're interested in hosting your blog's images on Azure Blob Storage, check out Tommy Parnell's [ghost-azure-storage module](https://github.com/tparnell8/ghost-azurestorage) that plugs directly into Ghost.
+This deployment has been preconfigured to enable Azure Blob Storage for images. It installs [Azure Blob Storage adapter](https://github.com/dzimchuk/ghost-azure-blob-storage) and you should set the following environment variables to configure it:
+
+- storage_connectionString
+- storage_container (lowercase, 3-63 characters, only letters, numbers or dashes (-), default is 'ghost')
+- storage_cdnUrl (optional, e.g. https://az******.vo.msecnd.net)
+
+If you don't want to store images in Azure please remove or reconfigure the `storage` section in config.json. If you want to install your own storage adapter at deployment time check out action 4 in deploy.cmd.
 
 ## Running Locally
 
