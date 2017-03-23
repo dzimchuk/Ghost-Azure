@@ -1,4 +1,4 @@
-# [Ghost (0.11.3)](https://github.com/TryGhost/Ghost) [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+# [Ghost (0.11.7)](https://github.com/TryGhost/Ghost) [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 Want to install [Ghost](https://ghost.org/) on Azure? Just click the 'Deploy to Azure' button and you're well on your way to have a Ghost Blog running within a minute or two!
 
@@ -55,4 +55,4 @@ The most comfortable way to update is to synchronize your Ghost installation wit
 
 ## Copyright & License
 
-Ghost is Copyright (c) 2013-2016 Ghost Foundation - Released under the [MIT license](LICENSE).
+Ghost is Copyright (c) 2013-2017 Ghost Foundation - Released under the [MIT license](LICENSE).
