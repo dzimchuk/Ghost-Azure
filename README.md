@@ -1,4 +1,4 @@
-# [Ghost (0.11.7)](https://github.com/TryGhost/Ghost) [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
+# [Ghost (0.11.11)](https://github.com/TryGhost/Ghost) [![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
 
 Want to install [Ghost](https://ghost.org/) on Azure? Just click the 'Deploy to Azure' button and you're well on your way to have a Ghost Blog running within a minute or two!
 
